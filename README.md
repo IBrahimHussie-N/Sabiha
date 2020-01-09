@@ -1,8 +1,8 @@
 # sabiha
 
-A new Flutter application.
+ Flutter application.
 
-## Getting Started
+![](assets/images/sabihascreenshot.png)
 
 This project is a starting point for a Flutter application.
 
