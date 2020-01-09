@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "961729412069",
+    "firebase_url": "https://fluttergo-e030d.firebaseio.com",
+    "project_id": "fluttergo-e030d",
+    "storage_bucket": "fluttergo-e030d.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:961729412069:android:41a1e9b80c356eb0160d0c",
+        "android_client_info": {
+          "package_name": "com.boms.go"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "961729412069-s0u1n24ii4dk1a81a5ek34o1upqf5cfg.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.boms.go",
+            "certificate_hash": "fe4592fe2085f04074305331b1dd61fbaf77b923"
+          }
+        },
+        {
+          "client_id": "961729412069-aee0ogb51avfr7fsohrl85m87rmjogp9.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDRaeRw1vWnnKFFVX8ckAJ7NJq3Us013ZM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "961729412069-aee0ogb51avfr7fsohrl85m87rmjogp9.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
