@@ -16,6 +16,9 @@ class _SabihaScreenState extends State<Sabiha> {
   int index= 0;
   double x;
 
+  final data= [ 'سبحـان اللّـه','الحمد للّه', 'اللَه اكبر','لا اله الا اللَه وحده لا شريك له,له الملك وله الحمد,وهو علي كل شئ قدير'
+  ];
+
   saveCount() async {
     SharedPreferences count = await SharedPreferences.getInstance();
     int savecount = count.getInt('counter');
@@ -40,7 +43,7 @@ class _SabihaScreenState extends State<Sabiha> {
     });
   }
 
-  rebuild() async {
+  refresh() async {
     SharedPreferences count = await SharedPreferences.getInstance();
     SharedPreferences s_index = await SharedPreferences.getInstance();
     SharedPreferences s_percentage = await SharedPreferences.getInstance();
@@ -62,11 +65,6 @@ class _SabihaScreenState extends State<Sabiha> {
     super.initState();
 
   }
-
-
-
-  final data= [ 'سبحـان اللّـه','الحمد للّه', 'اللَه اكبر','لا اله الا اللَه وحده لا شريك له,له الملك وله الحمد,وهو علي كل شئ قدير'
-  ];
 
    _incrementCounter() async {
     SharedPreferences count = await SharedPreferences.getInstance();
@@ -96,18 +94,19 @@ class _SabihaScreenState extends State<Sabiha> {
       Vibration.vibrate(duration: 200);
 
     }
-
     if(_counter==100){
       Vibration.vibrate(duration: 200);
-      rebuild();
-
+      //refresh all value
+      refresh();
     }
   }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: Stack(
           children: <Widget>[
+            //container for background image
             Container(
               decoration: BoxDecoration(
                 image: DecorationImage(
@@ -115,6 +114,7 @@ class _SabihaScreenState extends State<Sabiha> {
                   image:AssetImage("assets/images/sbha.jpg"), ),
               ),
             ),
+            //Positioned have iconButton for refresh all value
             Positioned(
               right: 10.0,
               top: 25.0,
@@ -122,7 +122,7 @@ class _SabihaScreenState extends State<Sabiha> {
                 icon: Icon(Icons.refresh,color: Colors.brown,size: 30,),
                 iconSize: 25.0,
                 onPressed: () {
-                 rebuild();
+                  refresh();
                 },
               ),
 
@@ -130,8 +130,9 @@ class _SabihaScreenState extends State<Sabiha> {
             Column(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: <Widget>[
+                //padding the OutlineButton that have text
                 Padding(
-                  padding: const EdgeInsets.only(top: 140,left: 8.0,right: 8.0),
+                  padding: const EdgeInsets.only(top: 150,left: 8.0,right: 8.0),
                   child: Center(
                       child: OutlineButton(
                         onPressed: (){},
@@ -150,7 +151,7 @@ class _SabihaScreenState extends State<Sabiha> {
                       )
                   ),
                 ),
-
+               //container keep that  circle and the button  counted  value
                 Container(
                   height: MediaQuery.of(context).size.height/2,
                   width:  MediaQuery.of(context).size.width/2,
@@ -178,6 +179,7 @@ class _SabihaScreenState extends State<Sabiha> {
                     ),
                   ),
                 ),
+
               ],
             ),
 
